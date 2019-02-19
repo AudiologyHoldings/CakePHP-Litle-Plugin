@@ -3,7 +3,7 @@
 * Helper class to preform some basic tasks.
 *
 */
-class LitleUtil extends Object {
+class LitleUtil extends CakeObject {
 	/**
 	* Litle configurations stored in
 	* app/config/litle.php
