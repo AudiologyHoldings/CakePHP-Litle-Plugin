@@ -54,7 +54,7 @@ class LitleToken extends LitleAppModel {
 	 * @return array $response
 	 */
 	public function beforeSave($options=array()) {
-		$config = set::merge($this->config, $options);
+		$config = Set::merge($this->config, $options);
 		$errors = array();
 		// setup defaults so elements are in the right order.
 		$data = $this->data[$this->alias];
@@ -86,7 +86,7 @@ class LitleToken extends LitleAppModel {
 		}
 		extract($this->lastRequest);
 		if (isset($response_array['RegisterTokenResponse'])) {
-			$response_array = set::flatten($response_array['RegisterTokenResponse']);
+			$response_array = Set::flatten($response_array['RegisterTokenResponse']);
 		}
 		extract($response_array);
 		$this->id = $transaction_id = (!empty($litleTxnId) ? $litleTxnId : 0);
